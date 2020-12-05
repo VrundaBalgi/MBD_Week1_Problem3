@@ -1,5 +1,8 @@
-t = (0:0.001:100)';
-nfreq = 100;
-sig1 = sin(2*pi*t);
-sig2 = 0.05*sin(nfreq*t*2*pi);
+h2r = 2*pi;
+tStop = 100;
+t = (0:0.001:tStop)';
+nFreq = 2000;
+K = 0.05;
+sig1 = sin(t*h2r);
+sig2 = K*sin(nFreq*t*h2r);
 noise = sig1+sig2;
